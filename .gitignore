@@ -1,3 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+.nomedia
+
+# Godot 3/4 general exports and lockfiles
+export.cfg
+export_presets.cfg
+export_credentials.cfg
+*.tmp
