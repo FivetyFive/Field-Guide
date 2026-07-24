@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bs10ehv7clri5"]
+
+[ext_resource type="Texture2D" uid="uid://cgnjmbjabw4fl" path="res://pixel-art-animation-background-snow-footage-259879936_iconl.webp" id="1_5b7ti"]
+[ext_resource type="FontFile" uid="uid://di52ejmsau0qy" path="res://PixelatedEleganceRegular-ovawB.ttf" id="2_dvdtt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxs28"]
+texture = ExtResource("1_5b7ti")
+modulate_color = Color(0.7635229, 0.64259106, 0.5619698, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yr4w"]
+bg_color = Color(0.9843137, 0.96862745, 0.93333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8627451, 0.827451, 0.7529412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[node name="MainMenu" type="Control" unique_id=1383819405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1776999476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rxs28")
+
+[node name="Label" type="Label" parent="Panel" unique_id=87821904]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_top = 95.0
+offset_right = 43.5
+offset_bottom = 118.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9843137, 0.96862745, 0.93333334, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.49803922)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 60
+text = "Field Guide"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=114287950]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -130.0
+offset_right = 124.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1197991980]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+text = "New Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1727673804]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=642185747]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+text = "Exit"
