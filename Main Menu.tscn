@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://bs10ehv7clri5"]
+
+[ext_resource type="Texture2D" uid="uid://cgnjmbjabw4fl" path="res://pixel-art-animation-background-snow-footage-259879936_iconl.webp" id="1_5b7ti"]
+[ext_resource type="Script" uid="uid://d1eoxwr78q1ok" path="res://main_menu.gd" id="1_i5qic"]
+[ext_resource type="FontFile" uid="uid://di52ejmsau0qy" path="res://PixelatedEleganceRegular-ovawB.ttf" id="2_dvdtt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxs28"]
+texture = ExtResource("1_5b7ti")
+modulate_color = Color(0.7635229, 0.64259106, 0.5619698, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yr4w"]
+bg_color = Color(0.9843137, 0.96862745, 0.93333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8627451, 0.827451, 0.7529412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvdtt"]
+bg_color = Color(0.65, 0.63970834, 0.61749995, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8627451, 0.827451, 0.7529412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5qic"]
+bg_color = Color(0.8, 0.78533334, 0.76, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8627451, 0.827451, 0.7529412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12kdf"]
+bg_color = Color(0.9843137, 0.96862745, 0.93333334, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8352941, 0.4862745, 0.27058825, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[node name="MainMenu" type="Control" unique_id=1383819405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i5qic")
+
+[node name="background" type="Panel" parent="." unique_id=1776999476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rxs28")
+
+[node name="title" type="Label" parent="background" unique_id=87821904]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_top = 95.0
+offset_right = 43.5
+offset_bottom = 118.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9843137, 0.96862745, 0.93333334, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.49803922)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 60
+text = "Field Guide"
+horizontal_alignment = 1
+
+[node name="buttonsContainer" type="VBoxContainer" parent="." unique_id=114287950]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -130.0
+offset_right = 124.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="newGame" type="Button" parent="buttonsContainer" unique_id=1197991980]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_focus_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_pressed_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_hover_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5qic")
+theme_override_styles/focus = SubResource("StyleBoxFlat_12kdf")
+text = "New Game"
+
+[node name="options" type="Button" parent="buttonsContainer" unique_id=1727673804]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_focus_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_pressed_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_hover_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5qic")
+theme_override_styles/focus = SubResource("StyleBoxFlat_12kdf")
+text = "Options"
+
+[node name="exit" type="Button" parent="buttonsContainer" unique_id=642185747]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_focus_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_pressed_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_colors/font_hover_color = Color(0.17254902, 0.14901961, 0.11372549, 1)
+theme_override_fonts/font = ExtResource("2_dvdtt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yr4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5qic")
+theme_override_styles/focus = SubResource("StyleBoxFlat_12kdf")
+text = "Exit"
+
+[connection signal="pressed" from="buttonsContainer/newGame" to="." method="_on_newGame_pressed"]
+[connection signal="pressed" from="buttonsContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttonsContainer/exit" to="." method="_on_exit_pressed"]
