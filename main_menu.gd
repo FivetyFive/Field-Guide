@@ -18,7 +18,7 @@ func _on_newGame_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	print("Options pressed")
-	#get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Options Menu.tscn")
 
 
 func _on_exit_pressed() -> void:
